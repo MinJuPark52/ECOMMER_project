@@ -1,8 +1,7 @@
-// src/KakaoLogin.js
+import React from "react";
 
 const KakaoLogin = () => {
-  const redirect_uri = "http://localhost:5173/auth"; //Redirect URI
-  // oauth 요청 URL
+  const redirect_uri = "https://ecommer.vercel.app/";
   const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=&redirect_uri=${redirect_uri}&response_type=code`;
   const handleLogin = () => {
     window.location.href = kakaoURL;

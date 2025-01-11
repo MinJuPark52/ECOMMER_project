@@ -31,28 +31,24 @@ const Header = () => {
   const [filteredKeywords, setFilteredKeywords] = useState([]);
   const [isOpen, setOpen] = useState(null);
 
-  // 카테고리 메뉴 토글
   const toggleMenu = (menu) => {
     setOpen(isOpen === menu ? null : menu);
   };
 
-  // 검색어 변경 시 자동완성 필터링
   const handleSearchChange = (event) => {
     const term = event.target.value;
     setSearchTerm(term);
 
-    // 검색어가 있을 경우 키워드 목록 필터링
     if (term) {
       const filtered = keywords.filter((keyword) =>
         keyword.toLowerCase().includes(term.toLowerCase())
       );
       setFilteredKeywords(filtered);
     } else {
-      setFilteredKeywords([]); // 검색어가 없으면 자동완성 리스트 비우기
+      setFilteredKeywords([]);
     }
   };
 
-  // 자동완성 항목을 선택했을 때
   const handleSearchSelect = (selectedKeyword) => {
     setSearchTerm(selectedKeyword);
     setFilteredKeywords([]);
@@ -61,16 +57,16 @@ const Header = () => {
 
   return (
     <>
-      <div className="header-container">
-        <div className="search-container">
+      <div className="flex justify-between items-center p-4 fixed top-0 left-0 right-0 z-[1000] bg-[#f3f3f3]">
+        <div className="flex items-center relative">
           <input
             type="text"
-            className="search-bar"
+            className="ml-2 sm:w-[45rem] lg:w-[90rem] py-3 px-4 rounded-2xl text-base"
             placeholder="검색어를 입력해주세요"
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <FiSearch className="search-icon" />
+          <FiSearch className="absolute right-[2rem] text-[#888] text-lg" />
         </div>
 
         {/* 자동완성 목록 */}
@@ -88,34 +84,64 @@ const Header = () => {
           </ul>
         )}
 
-        <div className="icon-container">
-          {/* 로그인 상태에 따라 로그인/회원 표시 */}
-          <button onClick={() => navigate("/login")} aria-label="로그인">
+        <div className="flex justify-between gap-2">
+          <button
+            onClick={() => navigate("/login")}
+            aria-label="로그인"
+            className="text-black text-[1.56rem] leading-8 cursor-pointer m-[10px]"
+          >
             <FiUser />
           </button>
-          {/* 위시리스트 버튼 클릭 시 로그인 여부에 따라 동작 */}
-          <button onClick={() => navigate("/wishlist")} aria-label="찜 목록">
+
+          <button
+            onClick={() => navigate("/login")}
+            aria-label="찜 목록"
+            className="text-black text-[1.56rem] leading-8 cursor-pointer m-[10px]"
+          >
             <FiHeart />
           </button>
-          <button onClick={() => navigate("/cart")} aria-label="장바구니">
+          <button
+            onClick={() => navigate("/cart")}
+            aria-label="장바구니"
+            className="text-black text-[1.56rem] leading-8 cursor-pointer m-[10px]"
+          >
             <FiShoppingCart />
           </button>
         </div>
       </div>
 
       {/* 카테고리 메뉴 */}
-      <div className="category-container">
-        <ul className="category-list">
-          <li onClick={() => toggleMenu("new")}>신상품</li>
-          <li onClick={() => toggleMenu("best")}>베스트</li>
-          <li onClick={() => toggleMenu("sale")}>세일</li>
+      <div className="mt-16 -ml-4 -mr-4 p-4 bg-[#f3f3f3]">
+        <ul className="flex justify-start m-0 p-0">
+          <li
+            onClick={() => toggleMenu("new")}
+            className="ml-2 py-2 px-4 cursor-pointer text-base bg-transparent text-black mr-4"
+          >
+            신상품
+          </li>
+          <li
+            onClick={() => toggleMenu("best")}
+            className="py-2 px-4 cursor-pointer text-base bg-transparent text-black mr-4"
+          >
+            베스트
+          </li>
+          <li
+            onClick={() => toggleMenu("sale")}
+            className="py-2 px-4 cursor-pointer text-base bg-transparent text-black mr-4"
+          >
+            세일
+          </li>
         </ul>
 
-        {/* 하위 카테고리 목록 표시 */}
         {isOpen && (
-          <ul className="subcategory-list">
+          <ul className="flex justify-start mt-4  mx-0  mb-0">
             {categories[isOpen].map((item, index) => (
-              <li key={index}>{item}</li>
+              <li
+                key={index}
+                className="py-2 px-4 cursor-pointer text-sm bg-[#ffffff] rounded ml-2"
+              >
+                {item}
+              </li>
             ))}
           </ul>
         )}
