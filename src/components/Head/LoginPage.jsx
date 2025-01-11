@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./HeadStyle.css";
 import KakaoLogin from "./KakaoLogin";
 
 const LoginPage = () => {
@@ -21,22 +20,18 @@ const LoginPage = () => {
     } else {
       setError("");
       alert("로그인 되었습니다.");
-
-      // 로그인 시 인증 토큰과 isLoggedIn 값 설정
-      localStorage.setItem("authToken", "fake-jwt-token"); // 가짜 인증 토큰
-      localStorage.setItem("isLoggedIn", true); // 로그인 상태로 설정
-
-      navigate("/"); // 홈 페이지로 리디렉션
+      navigate("/");
     }
   };
 
   return (
     <div className="login-container">
-      <form className="login-form" onSubmit={loginSubmit}>
-        <h2>Login</h2>
+      <form className="p-12 w-[90%] text-center" onSubmit={loginSubmit}>
+        <h1 className="text-3xl font-medium">Login</h1>
+        <br />
         <div className="form-group">
           <input
-            className="input-field"
+            className="peer w-[600px] p-2 my-2 border border-gray-300 rounded-md text-base transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none focus:placeholder:text-sm placeholder:text-base placeholder:transition-all placeholder:duration-300"
             placeholder="아이디"
             type="text"
             id="id"
@@ -46,7 +41,7 @@ const LoginPage = () => {
         </div>
         <div className="form-group">
           <input
-            className="input-field"
+            className="peer w-[600px] p-2 my-2 border border-gray-300 rounded-md text-base transition-all duration-300 ease-in-out focus:border-blue-500 focus:outline-none focus:placeholder:text-sm placeholder:text-base placeholder:transition-all placeholder:duration-300"
             placeholder="비밀번호"
             type="password"
             id="password"
@@ -54,11 +49,14 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {error && <p className="error-message">{error}</p>}
-        <button className="submit-btn" type="submit">
+        {error && <p className="text-red text-sm mt-3">{error}</p>}
+        <button
+          className="mt-2 w-[610px] p-3 bg-blue-500 text-white text-base rounded-md cursor-pointer transition-colors duration-300 hover:bg-blue-700"
+          type="submit"
+        >
           로그인
         </button>
-        <div className="signup-link">
+        <div className="text-gray-500 text-sm no-underline mt-4 mr-[35.00rem] mb-4">
           <Link to="/join">회원가입</Link>
         </div>
         <div className="kakao-login">
