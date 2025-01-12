@@ -61,7 +61,7 @@ const Home = ({ isLoggedIn }) => {
               key={index}
               className="flex-shrink-0 w-full h-64 bg-gray-300 flex items-center justify-center"
             >
-              <img src="src/components/img/slide.png" alt="슬라이드 이미지" />
+              <img src="/slide.png" alt="슬라이드 이미지" />
             </div>
           ))}
         </div>
