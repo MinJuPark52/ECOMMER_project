@@ -12,7 +12,7 @@ const KakaoLogin = () => {
         onClick={handleLogin}
         style={{ border: "none", backgroundColor: "transparent" }}
       >
-        <img src="src\components\img\kakao_login_medium_narrow.png" />
+        <img src="/kakao_login_medium_narrow.png" />
       </button>
     </>
   );

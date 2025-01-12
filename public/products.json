@@ -5,7 +5,7 @@
     "price": 38.9,
     "description": "캐주얼 오버핏 흑청 자켓",
     "category": "women's clothing",
-    "image": "https://i.ibb.co/5MNBhJL/image.jpg"
+    "image": "/도프샵.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 15.99,
     "description": "소가죽 메리제인 플랫슈즈",
     "category": "shoes",
-    "image": "https://i.ibb.co/0Cv68zy/image.jpg"
+    "image": "/페스트델리.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 67.15,
     "description": "클레어 몰드 스트랩 샌들",
     "category": "shoes",
-    "image": "https://i.ibb.co/mqR5cRm/image.jpg"
+    "image": "/뉴얼.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 32.32,
     "description": "베이직 스틸레토힐",
     "category": "shoes",
-    "image": "https://i.ibb.co/HGRB3Fy/image.jpg"
+    "image": "/어드리모먼트.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": 168,
     "description": "핀덕 스트레이트 일자 팬츠",
     "category": "pants",
-    "image": "https://i.ibb.co/JqWk4t1/image.jpg"
+    "image": "/블루프렌치.jpg"
   },
   {
     "id": 6,
@@ -45,16 +45,15 @@
     "price": 40.9,
     "description": "멀티 포켓 캐주얼 크로스백",
     "category": "pants",
-    "image": "https://i.ibb.co/tJstphB/image.jpg"
+    "image": "/세인트.jpg"
   },
-
   {
     "id": 7,
     "title": "톤오브",
     "price": 109,
     "description": "미니 토트 크로스백",
     "category": "bag",
-    "image": "https://i.ibb.co/yf5XV0b/image.jpg"
+    "image": "/톤오브.jpg"
   },
   {
     "id": 8,
@@ -62,7 +61,7 @@
     "price": 78.3,
     "description": "데일리 포켓 백팩",
     "category": "bag",
-    "image": "https://i.ibb.co/NmKsJms/image.jpg"
+    "image": "/리해르.jpg"
   },
   {
     "id": 9,
@@ -70,7 +69,7 @@
     "price": 11.4,
     "description": "캐시미어 울 라운드 니트",
     "category": "women's clothing",
-    "image": "https://i.ibb.co/wJSBWnM/image.jpg"
+    "image": "/로즈도리.jpg"
   },
   {
     "id": 10,
@@ -78,7 +77,7 @@
     "price": 51.89,
     "description": "어바웃 벨트 숄더백",
     "category": "bag",
-    "image": "https://i.ibb.co/pRzryxL/image.jpg"
+    "image": "/머룬.jpg"
   },
   {
     "id": 11,
@@ -86,7 +85,7 @@
     "price": 41.5,
     "description": "뉴 보부상 숄더백",
     "category": "bag",
-    "image": "https://i.ibb.co/rygQwRx/image.jpg"
+    "image": "/립온.jpg"
   },
   {
     "id": 12,
@@ -94,7 +93,7 @@
     "price": 32.39,
     "description": "프리미엄 숏 패딩 점퍼",
     "category": "women's clothing",
-    "image": "https://i.ibb.co/Y2h5cTZ/image.jpg"
+    "image": "/그레이프.jpg"
   },
   {
     "id": 13,
@@ -102,6 +101,6 @@
     "price": 36.26,
     "description": "베이직 라운드 가디건",
     "category": "women's clothing",
-    "image": "https://i.ibb.co/kmVw0KJ/image.jpg"
+    "image": "/에스트리.jpg"
   }
 ]

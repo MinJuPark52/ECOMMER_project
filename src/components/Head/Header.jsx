@@ -61,7 +61,7 @@ const Header = () => {
         <div className="flex items-center relative">
           <input
             type="text"
-            className="ml-2 sm:w-[45rem] lg:w-[90rem] py-3 px-4 rounded-2xl text-base"
+            className="ml-2 sm:w-[45rem] lg:w-[80rem] py-3 px-4 rounded-2xl text-base"
             placeholder="검색어를 입력해주세요"
             value={searchTerm}
             onChange={handleSearchChange}
