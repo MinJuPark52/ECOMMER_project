@@ -1,16 +1,16 @@
 /*검색 키워드 자동 완성*/
 .suggestions-list {
-  display: none; /* 기본적으로 숨김 */
-  position: absolute; /* 검색창 바로 아래에 위치하도록 설정 */
-  top: 2.5rem; /* 검색창 아래 위치 */
+  display: none;
+  position: absolute;
+  top: 3.5rem;
   left: 1.5rem;
-  width: 75%; /*95*/
-  overflow-y: auto; /* 스크롤 활성화 */
+  width: 45rem;
+  overflow-y: auto;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*#fff*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  z-index: 1000; /* 검색창보다 위에 표시되도록 */
-  padding: 5px; /*10*/
+  z-index: 1000;
+  padding: 5px;
 }
 
 /* 자동완성 목록 보이게 하기 */
